@@ -1,0 +1,25 @@
+# 修改文件
+$ vim readme.txt
+Git is a distributed version control system
+
+# 如果文件存在且被修改，提示该文件被修改
+# 当有新文件创建时，提示新文件
+$ git status
+// 提示文件已经被修改
+
+# 查看文件别修改的内容
+$ git diff readme.txt
+// 文件被修改的地方，修改后会和修改前对比
+diff --git a/readme.txt b/readme.txt
+index 6bf6290..7ba75af 100644
+--- a/readme.txt
+--- b/readme.txt
+@@ -1,4 +1,4 @@
+-Git is a version control system
++Git is a distributed version control system
+This is a git file
+Git is a version control system
+
+# 查看工作区和版本库中最新版本的区别，
+# 在此之前需要了解版本库和工作区
+$ git diff HEAD -- readme.txt
